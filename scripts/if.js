@@ -26,3 +26,23 @@ if (isLoggedIn) {
 } else {
   console.log("Utilizatorul nu este autentificat.");
 }
+
+// 4. Verificare rol user venit din input de la tastatura
+var userRole = prompt();
+var isOwner = userRole == "owner" ? true : false;
+if(userRole == 'owner') {
+  var isOwner = true;
+} else {
+  var isOwner = false;
+}
+
+var isSefRaion = userRole == "sef raion";
+var isMarketing = userRole == "marketing";
+
+var hasUpperMngmtRole = isOwner || isSefRaion || isMarketing;
+
+if (hasUpperMngmtRole) {
+  text = "organizez magazin local";
+} else {
+  text = "am cont";
+}

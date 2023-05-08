@@ -32,6 +32,33 @@ switch (numarZi) {
 
 console.log("Numarul " + numarZi + " este ziua de " + ziuaSaptamanii);
 
+// Alternativa cu switch (true)
+switch (true) {
+  case numarZi == 1:
+    ziuaSaptamanii = "Luni";
+    break;
+  case numarZi == 2:
+    ziuaSaptamanii = "Marti";
+    break;
+  case numarZi == 3:
+    ziuaSaptamanii = "Miercuri";
+    break;
+  case numarZi == 4:
+    ziuaSaptamanii = "Joi";
+    break;
+  case numarZi == 5:
+    ziuaSaptamanii = "Vineri";
+    break;
+  case numarZi == 6:
+    ziuaSaptamanii = "Sambata";
+    break;
+  case numarZi == 7:
+    ziuaSaptamanii = "Duminica";
+    break;
+  default:
+    console.log("Numarul nu este valid.");
+}
+
 /* ---------------- - --------------- */
 // 2. Afișarea unui mesaj diferit în funcție de valoarea unei variabile
 /* ---------------- - --------------- */
