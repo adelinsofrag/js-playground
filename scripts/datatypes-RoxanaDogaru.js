@@ -31,12 +31,11 @@ console.log("--Operatori de comparare--");
         console.log("-------- // Exercițiul 1: -------- ");
         var g=42;
         var h=3;
-        var i=g>h;
-
-        var egalitate= "G este mai mare decât H";
-        var diferenta = "H este mai mare sau egal cu G";
-       
-        console.log(i);
+        if (g>h){
+                console.log("g mai mare decat h");
+        }else{
+                console.log("h mai mare decat g");
+        }
 
         console.log("-------- // Exercițiul 2: -------- ");
         var varsta=50 ;
