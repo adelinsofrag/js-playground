@@ -35,15 +35,12 @@ let result = "";
 const sum = function (sum1, sum2) {
   return sum1 + sum2;
 };
-
 const substract = function (sub1, sub2) {
   return sub1 - sub2;
 };
-
 const divide = function (div1, div2) {
   return div1 / div2;
 };
-
 const multiply = function (mul1, mul2) {
   return mul1 * mul2;
 };
