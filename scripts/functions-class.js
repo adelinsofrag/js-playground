@@ -50,17 +50,8 @@ const multiply = function (mul1, mul2) {
 
 function calcOperation(num1, num2, tpye) {
   switch (type) {
-    case "sum":
-      result = sum(num1, num2);
-      break;
-    case "substract":
-      result = substract(num1, num2);
-      break;
-    case "divide":
-      result = divide(num1, num2);
-      break;
-    case "multiply":
-      result = multiply(num1, num2);
+    case type:
+      result = type(num1, num2);
       break;
     case "":
       result = "Chose an operation: sum / substract / divide / multiply";
