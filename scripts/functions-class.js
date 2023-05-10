@@ -1,6 +1,14 @@
-let response;
+/**
+* @param {*} pastaAmount;
+* @param {*} oilAmount;
+* @param {*} garlicAmount;
+* @param {*} pepperAmount;
+* @param {*} saltAmount;
 
+*/
 function displayAmount(ingredientAmount, ingredientText) {
+  let response;
+
   if (ingredientAmount) {
     response =
       "Grame de " + ingredientText + ": " + ingredientAmount + " grame";
