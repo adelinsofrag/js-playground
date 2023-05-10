@@ -43,17 +43,18 @@ for (var i = 0; i <= 20; i += 2) {
   }
   console.log(count);
   // - o varianta mai simpla pentru problema de mai sus
-let sircar = prompt("Introduceti un sir de caractere:");
-let vocale = 'aâîăeiouAĂÎÂEIOU';
-let count = 0;
 
-for (let i = 0; i < sircar.length; i++) {
-  if (vocale.includes(str[i])) {
-    count++;
-  }
-}
+    let sircar = prompt("Introduceti un sir de caractere:");
+    let vocale = 'aâîăeiouAĂÎÂEIOU';
+    let count = 0;
 
-console.log("Numarul de vocale din sirul de caractere este: " + count);
+    for (var i = 0; i < sircar.length; i++) {
+    if (vocale.includes(sircar[i])) {
+     count++;
+    }
+    }
+
+    console.log("Numarul de vocale din sirul de caractere este: " + count);
 
   
   // 4. Tabla inmultirii a unui numar
