@@ -29,7 +29,7 @@ console.log("----------------------------------------");
 
 const num1 = Number(prompt("Your first number"));
 const num2 = Number(prompt("Your second number"));
-const type = prompt("Type a choice: sum / substract / divide / multiply");
+const type = prompt("Type a choice: +, -, / or *");
 let result = "";
 
 const sum = function (sum1, sum2) {
@@ -50,23 +50,23 @@ const multiply = function (mul1, mul2) {
 
 function calcOperation(num1, num2, type) {
   switch (type) {
-    case "sum":
+    case "+":
       result = sum(num1, num2);
       break;
-    case "substract":
+    case "-":
       result = substract(num1, num2);
       break;
-    case "divide":
+    case "/":
       result = divide(num1, num2);
       break;
-    case "multiply":
+    case "*":
       result = multiply(num1, num2);
       break;
     case "":
-      result = "Chose an operation: sum / substract / divide / multiply";
+      result = "Type a choice: +, -, / or *";
       break;
     default:
-      result = "Chose an operation: sum / substract / divide / multiply";
+      result = "Type a choice: +, -, / or *";
   }
 
   return console.log(result);
