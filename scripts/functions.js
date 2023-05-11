@@ -185,3 +185,61 @@ function cookPasta(nrPersoane) {
       nrPersoane * salt
   );
 }
+
+/* ---------------------------------- */
+/*           Other examples           */
+/* ---------------------------------- */
+// Problema 1: Verifică dacă numărul este par
+function isEven(num) {
+  // Verificarea asta:
+  // if (num % 2 === 0) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+  // poate fi scrisa asa:
+  return num % 2 === 0;
+}
+
+// Problema 2: Calculează suma celor două numere înmulțită cu 0.1
+function sumMultipliedByPointOne(num1, num2) {
+  return (num1 + num2) * 0.1;
+}
+
+// Problema 3: Calculează procentajul dintr-un număr
+function calculatePercentage(num, percentage) {
+  return (num * percentage) / 100;
+}
+
+// Problema 4: Află cel mai mare număr din cele trei primite
+function findMax(num1, num2, num3) {
+  let max = num1;
+
+  if (num2 > max) {
+    max = num2;
+  }
+
+  if (num3 > max) {
+    max = num3;
+  }
+
+  return max;
+}
+
+// Problema 5: Calculează suma tuturor numerelor întregi de la 0 până la numărul dat
+function sumIntegersUpTo(num) {
+  let sum = 0;
+
+  for (let i = 0; i <= num; i++) {
+    sum += i;
+  }
+
+  return sum;
+}
+
+// Exemple de apelare a funcțiilor
+console.log(isEven(4)); // true
+console.log(sumMultipliedByPointOne(10, 20)); // 3
+console.log(calculatePercentage(200, 25)); // 50
+console.log(findMax(10, 20, 15)); // 20
+console.log(sumIntegersUpTo(5)); // 15
