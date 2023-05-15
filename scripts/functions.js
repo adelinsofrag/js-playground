@@ -243,3 +243,28 @@ console.log(sumMultipliedByPointOne(10, 20)); // 3
 console.log(calculatePercentage(200, 25)); // 50
 console.log(findMax(10, 20, 15)); // 20
 console.log(sumIntegersUpTo(5)); // 15
+
+// Asezare in local a unui grup de persoane
+function aseazaLaMese(nrPers, locuriDisponibile, persLaMasa) {
+  // daca e loc pentru toti
+  if (nrPers > locuriDisponibile * persLaMasa) {
+    console.log("Nu exista suficiente locuri pentru a aseza toate persoanele.");
+    return;
+  }
+
+  var meseOcupate = (nrPers / persLaMasa) | 0; // Numarul de mese ocupate
+  var locuriLibere = meseOcupate * persLaMasa - nrPers; // Numarul de locuri libere
+  var meseRamas = meseOcupate - Math.floor(nrPers / persLaMasa); // Numarul de mese la care au ramas locuri libere
+
+  console.log("Numarul de locuri libere: " + locuriLibere);
+  console.log("Numarul de mese la care au ramas locuri libere: " + meseRamas);
+}
+
+aseazaLaMese(10, 5, 2);
+aseazaLaMese(30, 15, 3);
+aseazaLaMese(20, 10, 4);
+aseazaLaMese(30, 10, 4);
+aseazaLaMese(5, 2, 3);
+aseazaLaMese(10, 5, 1);
+aseazaLaMese(10, 5, 3);
+aseazaLaMese(15, 5, 2);
