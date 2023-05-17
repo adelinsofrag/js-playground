@@ -81,8 +81,20 @@ function verificaExistentaCalificare(candidati, calificareCautata) {
 }
 
 // Utilizare
-var studenti = {
-  student1: { nume: "John", varsta: 20 },
+
+// sudenti = variabila
+var studenti = 
+// contine un obiect ca valoare
+{
+  // key
+  student1: 
+  // valoare - un alt obiect
+  { 
+    // key : value
+    nume: "John", 
+    // key : value
+    varsta: 20 
+  },
   student2: { nume: "Alice", varsta: 22 },
   student3: { nume: "Mark", varsta: 19 },
 };
