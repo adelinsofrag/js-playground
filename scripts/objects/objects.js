@@ -1,12 +1,27 @@
 // Exercițiul 1: Calcularea sumei vârstelor
 function calculeazaSumaVarstelor(studenti) {
   var sumaVarstelor = 0;
+  var numarStudenti = 0;
+  console.log("Input Studenti: ", studenti);
 
-  for (var student in studenti) {
-    sumaVarstelor += studenti[student].varsta;
+  for (var studentCurrent in studenti) {
+    console.log("Student: ", studentCurrent);
+
+    sumaVarstelor += studenti[studentCurrent].varsta;
+
+    console.log(
+      "Studentul actual are varsta: ",
+      studenti[studentCurrent].varsta,
+      "=> Suma varstelor: ",
+      sumaVarstelor
+    );
+    // numarStudenti = numarStudenti + 1;
+    numarStudenti += 1;
   }
 
-  return sumaVarstelor;
+  console.warn("Total studenti:", numarStudenti);
+
+  return sumaVarstelor / numarStudenti;
 }
 
 // Exercițiul 2: Concatenarea numelor de familie
@@ -44,6 +59,7 @@ function verificaExistentaEmail(utilizatori, emailCautat) {
   return false;
 }
 
+//TODO: check this when doing Arrays
 // Exercițiul 5: Calcularea numărului total de persoane dintr-un obiect
 function calculeazaNumarTotalPersoane(angajati) {
   var numarTotalPersoane = 0;
@@ -66,38 +82,74 @@ function verificaExistentaDepartament(companie, numeDepartament) {
   return false;
 }
 
+
+
+
+
+
+var candidati = {
+  candidat1: { nume: "Maria", calificari: ["HTML", "CSS", "JavaScript"] },
+  candidat2: { nume: "Alex", calificari: ["Java", "Python", "C++"] },
+};
+
+
+
+
 // Exercițiul 7: Verificarea existenței unei calificări într-un obiect
 function verificaExistentaCalificare(candidati, calificareCautata) {
+  // prima data:
+  // trec prin toti candidatii ==> fiecare fiind un alt obiect
   for (var candidat in candidati) {
+  
+    // stochez intr-o variabile calificarile
     var calificari = candidati[candidat].calificari;
+  
+    // trec prin acea lista de calificari (stocata mai sus^)
     for (var i = 0; i < calificari.length; i++) {
+
+      // daca am dat de o calificare care e identica cu parametrul venit ca input calificareCautata
       if (calificari[i] === calificareCautata) {
+        // return true! ==> are skillul respectiv.
         return true;
       }
     }
   }
 
+  // nu are acel skill.
   return false;
 }
+
+
+console.log(verificaExistentaCalificare(candidati, "JavaScript")); // Output: true
+
+
+
+
+
+
+
+
+
+
 
 // Utilizare
 
 // sudenti = variabila
-var studenti = 
-// contine un obiect ca valoare
-{
-  // key
-  student1: 
-  // valoare - un alt obiect
-  { 
-    // key : value
-    nume: "John", 
-    // key : value
-    varsta: 20 
-  },
-  student2: { nume: "Alice", varsta: 22 },
-  student3: { nume: "Mark", varsta: 19 },
-};
+var studenti =
+  // contine un obiect ca valoare
+  {
+    // key
+    student1:
+      // valoare - un alt obiect
+      {
+        // key : value
+        nume: "John",
+        // key : value
+        varsta: 20,
+      },
+    student2: { nume: "Alice", varsta: 22 },
+    student3: { nume: "Mark", varsta: 19 },
+  };
 console.log(calculeazaSumaVarstelor(studenti)); // Output: 61
 
 var familii = {
