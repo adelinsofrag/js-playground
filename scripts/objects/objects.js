@@ -1,28 +1,14 @@
 // Exercițiul 1: Calcularea sumei vârstelor
 function calculeazaSumaVarstelor(studenti) {
   var sumaVarstelor = 0;
-  var numarStudenti = 0;
-  console.log("Input Studenti: ", studenti);
 
-  for (var studentCurrent in studenti) {
-    console.log("Student: ", studentCurrent);
-
-    sumaVarstelor += studenti[studentCurrent].varsta;
-
-    console.log(
-      "Studentul actual are varsta: ",
-      studenti[studentCurrent].varsta,
-      "=> Suma varstelor: ",
-      sumaVarstelor
-    );
-    // numarStudenti = numarStudenti + 1;
-    numarStudenti += 1;
+  for (var student in studenti) {
+    sumaVarstelor += studenti[student].varsta;
   }
 
-  console.warn("Total studenti:", numarStudenti);
-
-  return sumaVarstelor / numarStudenti;
+  return sumaVarstelor;
 }
+
 
 // Exercițiul 2: Concatenarea numelor de familie
 function concateneazaNumeFamilie(familii) {
@@ -34,6 +20,7 @@ function concateneazaNumeFamilie(familii) {
 
   return numeFamilieConcatenat.trim();
 }
+
 
 // Exercițiul 3: Găsirea celui mai mare punctaj
 function gasesteCelMaiMarePunctaj(elevi) {
@@ -48,6 +35,7 @@ function gasesteCelMaiMarePunctaj(elevi) {
   return celMaiMarePunctaj;
 }
 
+
 // Exercițiul 4: Verificarea existenței unui email într-un obiect
 function verificaExistentaEmail(utilizatori, emailCautat) {
   for (var utilizator in utilizatori) {
@@ -59,7 +47,7 @@ function verificaExistentaEmail(utilizatori, emailCautat) {
   return false;
 }
 
-//TODO: check this when doing Arrays
+
 // Exercițiul 5: Calcularea numărului total de persoane dintr-un obiect
 function calculeazaNumarTotalPersoane(angajati) {
   var numarTotalPersoane = 0;
@@ -70,6 +58,7 @@ function calculeazaNumarTotalPersoane(angajati) {
 
   return numarTotalPersoane;
 }
+
 
 // Exercițiul 6: Verificarea existenței unui departament într-un obiect
 function verificaExistentaDepartament(companie, numeDepartament) {
@@ -83,16 +72,10 @@ function verificaExistentaDepartament(companie, numeDepartament) {
 }
 
 
-
-
-
-
 var candidati = {
   candidat1: { nume: "Maria", calificari: ["HTML", "CSS", "JavaScript"] },
   candidat2: { nume: "Alex", calificari: ["Java", "Python", "C++"] },
 };
-
-
 
 
 // Exercițiul 7: Verificarea existenței unei calificări într-un obiect
