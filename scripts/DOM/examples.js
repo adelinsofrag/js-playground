@@ -1,14 +1,14 @@
 // Fac update la textul continut de un <p>
-const paragraph = document.getElementById("paragraph");
-paragraph.textContent = "The new content of the paragraph";
+// const paragraph = document.getElementById("paragraph");
+// paragraph.textContent = "The new content of the paragraph";
 
 // Adaug un nou <p> la un eveniment de click pe un <button>
 const ctaPrimary = document.getElementById("cta-primary");
 const div = document.getElementById("first-impact-content");
 
 ctaPrimary.addEventListener("click", function () {
-  const newElement = document.createElement("p");
-  newElement.textContent = "Newly added element";
+  const newElement = document.createElement("p"); // <p></p>
+  newElement.textContent = "Hello! I am new here."; // <p>Hello! I am new here.</p>
   div.appendChild(newElement);
 });
 
@@ -20,7 +20,7 @@ div.addEventListener("click", function (event) {
   }
 });
 
-// Schimb stilul unui button la evenimentul de click pe acesta
+// Schimb stilul unui button la evenimentul de click pe acest button
 const ctaSecondary = document.getElementById("cta-secondary");
 
 ctaSecondary.addEventListener("click", function () {

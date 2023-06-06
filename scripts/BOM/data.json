@@ -1,0 +1,18 @@
+[
+    {
+        "id": 3,
+        "brand": "Fanta",
+        "flavor": "Portocală",
+        "description": "Suc carbogazos cu aromă de portocală, perfect pentru răcorire.",
+        "price": 1.8,
+        "quantity": 120
+    },
+    {
+        "id": 4,
+        "brand": "Sprite",
+        "flavor": "Lămâie",
+        "description": "Băutură carbogazoasă cu gust de lămâie, revigorantă și răcoritoare.",
+        "price": 2.0,
+        "quantity": 90
+    }
+]
