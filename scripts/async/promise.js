@@ -82,6 +82,7 @@ function handleResponseEx5(drinks) {
 /*               Promise              */
 /* ---------------------------------- */
 function getData(url) {
+  // functia asta returneaza o promisiune
   return new Promise(function (resolve, reject) {
     // using an Ajax request
     var xhr = new XMLHttpRequest();
@@ -101,8 +102,13 @@ function getData(url) {
 }
 
 function handleClick() {
+  // fac request la o functie (vezi functia mai sus)
   getData("scripts/async/soda.json")
-    .then((drinks) => handleResponseEx1(drinks))
+    // daca getData ==> resolve execut ce am in callback de la then()
+    .then(function (drinks) {
+      return handleResponseEx5(drinks);
+    })
+    // daca getData => rejected execit ce am in callback de la catch()
     .catch(function (error) {
       console.error(error);
     });

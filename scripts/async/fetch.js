@@ -83,7 +83,10 @@ function handleResponseEx5(drinks) {
 function doRequest() {
   fetch("scripts/async/soda.json")
     .then(function (response) {
-      if (response.ok) {
+
+      console.log(response);
+
+      if (response.ok === true) {
         return response.json();
       }
       throw new Error("Network response was not ok.");
@@ -92,7 +95,7 @@ function doRequest() {
       // pentru ca drinks e considerat locul unde tine datele din raspuns
       function (drinks) {
         // cu datele acelea apelam functia dorita
-        return handleResponseEx3(drinks);
+        return handleResponseEx4(drinks);
       }
     )
     .catch(function (error) {

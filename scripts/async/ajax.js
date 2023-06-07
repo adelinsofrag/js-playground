@@ -6,6 +6,7 @@ function handleResponseEx1(drinks) {
   drinks.forEach(function (drink) {
     var brandName = drink.brand;
     var flavor = drink.flavor;
+    // var drinkInfo = brandName + " - " + flavor;
     var drinkInfo = `${brandName} - ${flavor}`;
 
     container.innerHTML += "<p>" + drinkInfo + "</p>";
@@ -27,6 +28,7 @@ function handleResponseEx3(drinks) {
   if (promptInput) {
     // Poate fi scris asa:
     // var filteredDrinks = drinks.filter((drink) => drink.flavor.toLowerCase() === promptInput.toLowerCase());
+    
     // Sau varianta cu function anonima:
     var filteredDrinks = drinks.filter(function (drink) {
       return drink.flavor.toLowerCase() === promptInput.toLowerCase();
@@ -77,6 +79,7 @@ function handleResponseEx5(drinks) {
     container.innerHTML = message;
   }
 }
+
 /* ---------------------------------- */
 /*           // Ajax request          */
 /* ---------------------------------- */
@@ -91,12 +94,15 @@ function doRequest() {
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       document.getElementById("hero-image").classList.add("d-none");
+      
+      // convertesc string in obiect
       var drinks = JSON.parse(xhr.responseText);
 
       // choose the function you wanna execute
-      handleResponseEx5(drinks);
+      handleResponseEx3(drinks);
     }
   };
+
   xhr.send();
 }
 
